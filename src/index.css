@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    /* Enhanced blue travel palette */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 65%;
+    --primary-deep: 220 100% 35%;
+
+    /* Warm coral secondary */
+    --secondary: 16 85% 88%;
+    --secondary-foreground: 210 20% 15%;
+    --secondary-dark: 16 85% 70%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Sage green accent */
+    --accent: 140 40% 85%;
+    --accent-foreground: 210 20% 15%;
+    --accent-dark: 140 40% 65%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 202 83% 41%;
+
+    /* Enhanced travel gradients with 3D depth */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(210 100% 65%) 50%, hsl(220 100% 35%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(16 85% 70%) 0%, hsl(45 100% 75%) 50%, hsl(30 100% 60%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(210 100% 65%) 0%, hsl(210 100% 45%) 50%, hsl(220 100% 35%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Enhanced 3D shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(210 100% 45% / 0.15);
+    --shadow-travel: 0 10px 40px -10px hsl(210 100% 45% / 0.25);
+    --shadow-3d: 0 20px 60px -15px hsl(210 100% 45% / 0.3), 0 0 0 1px hsl(210 100% 45% / 0.05);
+    --shadow-glow: 0 0 40px hsl(210 100% 65% / 0.4);
+    --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.37);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 27% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 27% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 27% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Enhanced dark mode blue palette */
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 27% 8%;
+    --primary-light: 210 100% 75%;
+    --primary-deep: 220 100% 45%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 215 25% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 210 100% 60%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 60%) 0%, hsl(210 100% 75%) 50%, hsl(220 100% 45%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(16 85% 60%) 0%, hsl(45 100% 65%) 50%, hsl(30 100% 50%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(210 100% 75%) 0%, hsl(210 100% 60%) 50%, hsl(220 100% 45%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+
+    /* Dark mode shadows with glow */
+    --shadow-soft: 0 4px 20px -4px hsl(210 100% 60% / 0.25);
+    --shadow-travel: 0 10px 40px -10px hsl(210 100% 60% / 0.35);
+    --shadow-3d: 0 20px 60px -15px hsl(210 100% 60% / 0.4), 0 0 0 1px hsl(210 100% 60% / 0.1);
+    --shadow-glow: 0 0 40px hsl(210 100% 75% / 0.6);
+    --shadow-glass: 0 8px 32px rgba(59, 130, 246, 0.15);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+/* Custom 3D and animation utilities */
+@layer components {
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-gradient-glass border border-white/20;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .card-3d {
+    @apply transform transition-all duration-500 hover:scale-105;
+    box-shadow: var(--shadow-3d);
+  }
+  
+  .card-3d:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .parallax-scroll {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+  
+  .nav-blur {
+    @apply backdrop-blur-2xl bg-background/80 border-b border-border/50;
+    box-shadow: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+  }
+  
+  /* Navigation emerging effects */
+  .nav-emerge {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-emerge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .nav-emerge:hover::before {
+    left: 100%;
+  }
+
+  .nav-emerge:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+  }
+
+  /* Fast loading image effects */
+  .image-optimized {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    will-change: opacity, transform;
+  }
+
+  .image-optimized:not(.loaded) {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  .image-optimized.loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Enhanced button hover effects */
+  .btn-emerge {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-emerge::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+
+  .btn-emerge:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+}
